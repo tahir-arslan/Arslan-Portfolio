@@ -1,0 +1,10 @@
+header
+
+header (nav (ul (li)))
+
+.hero (.hero-picture, .hero-text)
+
+.projects (h2, .first-project(.positioned-text(h3, p)), .future-project(.positioned-text(h3, p)))
+
+.contact-me (h2, ul (li))
+
