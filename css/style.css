@@ -18,7 +18,11 @@ h2 {
 }
 
 section {
-    padding: 20px 100px;
+    padding: 20px 200px;
+}
+
+p {
+    line-height: 1.5;
 }
 
 /* header (h1, nav (ul (li (a)))) */
@@ -31,10 +35,6 @@ header {
 
 header h1 {
     font-weight: bold;
-}
-
-header nav {
-    font-size: 26px;
 }
 
 header nav ul {
@@ -51,57 +51,49 @@ header nav ul li a {
 }
 
 /* .hero (article(img, .hero-text (p))) */
-
-.hero .columns {
+.hero-flex {
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
+    justify-content: space-between;
 }
 
-.hero article img {
+.hero img {
     width: 30vw;
     max-width: 300px;
     min-width: 200px;
 }
 
-.hero .hero-text {
-
+.hero-flex .hero-text {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
 }
 
 /* .projects (h2, .first-project (a, img, positioned-text (h3, p)),
              .project-list(.future-project(img, .positioned-text(h3, p))*/
 .projects {
-
     background-color: rgb(238, 148, 113);
-}
-
-.projects .project-list {
-    display: flex;
-    justify-content: space-between;
 }
 
 .projects img {
     border: 3px solid black;
 }
 
-/* .projects .first-project .positioned-text {
-    position: relative;
-    bottom: 8px;
-    left: 16px;
-} */
-
-.projects .first-project img{
-    width: 100%;
-    height: 400px;
-    margin: auto;
-    object-fit: cover;
-    object-position: 100% 0;
+.projects .first-project {
+    margin-bottom: 20px;
+    filter: sepia(60%);
     position: relative;
 }
 
-.projects .project-list .future-project img{
-    width: 20vw;
+.projects .first-project:hover{
+    filter: sepia(0%);
+}
 
+.projects .first-project img{
+    width: 100%;
+    height: 600px;
+    object-fit: cover;
+    object-position: 100% 0;
 }
 
 .projects .project-list {
@@ -110,9 +102,30 @@ header nav ul li a {
     justify-content: space-between;
 }
 
-.projects .project-list .future-project img {
+.projects .project-list .future-project {
+    position: relative;
+    filter: sepia(80%);
+}
+
+.projects .project-list .future-project img{
+    width: 20vw;
     width: 40vw;
     object-fit: cover;
+}
+
+.projects .project-list .future-project:hover{
+    filter: sepia(0%);
+}
+
+.positioned-text {
+    position: absolute;
+    bottom: 10px;
+    font-size: 14px;
+    background-color:rgb(255, 204, 204);
+    padding: 2px;
+    border: 3px solid black;
+    opacity: 1;
+    text-align: right;
 }
 
 /* .contact-me (.contact-info (h2, ul (li(p, a)))) */
