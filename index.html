@@ -1,95 +1,116 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Arslan Tahir: Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./css/style.css" />
 </head>
-<body>
+
+<body class="scroll-smooth">
     <!-- navigation -->
-    <header>
-        <h1>
+    <header class="flex flex-wrap h-screen justify-between items-center mx-auto px-4 py-2">
+        <h1 class="font-bold text-blue-600  text-lg md:text-2xl">
             <a href="/">Arslan Tahir</a>
         </h1>
         <nav>
-            <ul>
-                <li>
+            <ul class="flex flex-wrap text-lg md:text-2xl">
+                <li class="block text-blue-600 px-2 md:px-4 hover:font-blue-400">
                     <h2><a href="#about-me">About Me</a></h2>
                 </li>
-                <li>
+                <li class="block px-2 md:px-4 hover:text-blue-600">
                     <h2><a href="#projects">Projects</a></h2>
                 </li>
-                <li>
+                <li class="block px-2 md:px-4 hover:text-blue-600">
                     <h2><a href="#contact-me">Contact Me</a></h2>
                 </li>
             </ul>
         </nav>
+        <!--hero/about me-->
+        <section class="flex flex-wrap h-screen px-20 lg:px-60" id="about-me">
+            <div class="flex m-auto">
+                <img class="" src="./asset/images/headshot.png" alt="headshot" />
+                <div class="m-auto text-center md:text-left p-6">
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint voluptatem molestiae aperiam laudantium sequi quisquam id, optio magni eaque ea accusamus nesciunt eius eos nulla magnam culpa? Ipsam excepturi voluptates ducimus error alias consectetur rem
+                        incidunt laboriosam, sint, voluptate cupiditate distinctio, necessitatibus id nostrum mollitia repellendus quam veniam possimus impedit!
+                    </p>
+                </div>
+            </div>
+        </section>
     </header>
 
-    <!--hero/about me-->
-    <section class="hero" id="about-me">
-        <div class="hero-flex">
-            <img src="./images/headshot.png" alt="headshot" />
-            <div class="hero-text">
-                <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint voluptatem molestiae aperiam laudantium sequi quisquam id, optio magni eaque ea accusamus nesciunt eius eos nulla magnam culpa? Ipsam excepturi voluptates ducimus error alias consectetur rem incidunt laboriosam, sint, voluptate cupiditate distinctio, necessitatibus id nostrum mollitia repellendus quam veniam possimus impedit!
-                </p>
-            </div>
-        </div>
-    </section>
-
     <!--projects-->
-    <section class="projects" id="projects">
-        <h2>Projects</h2>
-        <br />
-        <div class="first-project">
-            <a href="https://tahir-arslan.github.io/run-buddy/" target="_blank">
-                <img src="./images/run-buddy-screenshot.png" alt="Run Buddy Website Screenshot" />
-                <div class="positioned-text">
-                    <h3>Run Buddy</h3>
-                    <p>Front End Website</p>
-                </div>
-            </a>
-        </div>
-        <div class="project-list">
-            <div class="future-project">
-                <img src="./images/javascript-project.jpg" alt="Random Password Generator Project" />
-                <div class="positioned-text">
-                    <h3>Random Password Generator</h3>
-                    <p>Javacript</p>
-                </div>
+    <section class="bg-orange-200" id="projects">
+        <div id="highlight-project" class="px-60 py-10">
+            <h2 class="font-bold text-xl">Projects</h2>
+            <div id="first-project" class="overflow-hidden h-80 rounded-lg py-10">
+                <a href="https://github.com/tahir-arslan/pay-day" target="_blank">
+                    <div class="relative rounded-r-lg px-6 py-2 bg-stone-200 w-1/3 mt-30">
+                        <h3>Artist Music Tour</h3>
+                        <p>Front End Website</p>
+                    </div>
+                    <img src="./asset/images/pay-day-screenshot.png" alt="Artist Music Tour Website" />
+                </a>
             </div>
-            <div class="future-project">
-                <img src="./images/upcoming-projects.jpg" alt="Placeholder Image" />
-                <div class="positioned-text">
-                    <h3>New Projects</h3>
-                    <p>Come back in the future to see more projects!</p>
+            <div id="first-project" class="overflow-hidden h-80 rounded-lg py-10">
+                <a href="https://tahir-arslan.github.io/Artist_Music_Tour/" target="_blank">
+                    <div class="relative rounded-r-lg px-6 py-2 bg-stone-200 w-1/3 mt-30">
+                        <h3>Artist Music Tour</h3>
+                        <p>Front End Website</p>
+                    </div>
+                    <img src="./asset/images/artist-music-tour-screenshot.png" alt="Artist Music Tour Website" />
+                </a>
+            </div>
+            <div id="project-list" class="grid grid-cols-2 gap-6 py-6 h-4">
+                <div class="grid-cols-1 overflow-hidden">
+                    <a href="https://tahir-arslan.github.io/run-buddy/" target="_blank">
+                        <img src="./asset//images/run-buddy-screenshot.png" alt="Run Buddy Website Screenshot" />
+                        <div class="positioned-text">
+                            <h3>Run Buddy</h3>
+                            <p>Front End Website</p>
+                        </div>
+                    </a>
+                </div>
+                <div class="grid-cols-1">
+                    <img src="./asset//images/javascript-project.jpg" alt="Random Password Generator Project" />
+                    <div class="positioned-text">
+                        <h3>Random Password Generator</h3>
+                        <p>Javacript</p>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
     <!--contact-->
-    <section class="contact-me" id="contact-me">
-        <h2>Get in touch!</h2>
-        <br />
-        <div class="contact-info">
-            <ul>
-                <li>
-                    <p>
-                        P. 905.905.9050
-                    </P>
-                </li>
-                <li>
-                    E: <a href="mailto:tahir.arslan@gmail.com">tahir.arslan@gmail.com</a>
-                </li>
-                <li>
-                    <a href="https://github.com/tahir-arslan/" target="_blank">GitHub</a>
-                </li>
-            </ul>
+    <section id="contact-me" class="mx-auto py-20 px-20 lg:px-60">
+        <div class="rounded-2xl border border-stone-600 border-4 p-6">
+            <h2 class="text-xl font-bold">Get in touch!</h2>
+            <div class="contact-info">
+                <ul>
+                    <li>
+                        <p>
+                            P. 905.905.9050
+                        </P>
+                    </li>
+                    <li>
+                        E: <a href="mailto:tahir.arslan@gmail.com">tahir.arslan@gmail.com</a>
+                    </li>
+                    <li>
+                        <a href="https://github.com/tahir-arslan/" target="_blank">GitHub</a>
+                    </li>
+                </ul>
+            </div>
         </div>
     </section>
+    <script src="./asset/js/script.js"></script>
+    <script src="https://cdn.tailwindcss.com "></script>
 </body>
+
 </html>
